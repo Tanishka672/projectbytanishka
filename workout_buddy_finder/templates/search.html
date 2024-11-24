@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Workout Buddies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Find Workout Buddies</h1>
+    <form method="post">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location">
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+        <h2>Results:</h2>
+        <ul>
+            {% for profile in results %}
+                <li><a href="{{ url_for('profile', user_id=profile.user.id) }}">{{ profile.user.username }}</a> - {{ profile.location }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

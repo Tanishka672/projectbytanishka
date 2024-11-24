@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout Buddy Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Workout Buddy Finder</h1>
+    <a href="{{ url_for('create_profile') }}">Create Profile</a>
+    <a href="{{ url_for('search') }}">Find Workout Buddies</a>
+</body>
+</html>

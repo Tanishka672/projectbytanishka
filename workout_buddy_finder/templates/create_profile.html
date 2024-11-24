@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Create Profile</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age">
+        <label for="fitness_goals">Fitness Goals:</label>
+        <input type="text" name="fitness_goals" id="fitness_goals">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location">
+        <label for="workout_preferences">Workout Preferences:</label>
+        <input type="text" name="workout_preferences" id="workout_preferences">
+        <button type="submit">Create Profile</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
